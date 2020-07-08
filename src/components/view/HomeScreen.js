@@ -33,7 +33,7 @@ export function HomeScreen(props) {
   return (
     <View>
       <ScrollView style={imagesWrapper}>
-        <Header title={'unsplash'} />
+        <Header title={'Unsplash'} />
         {imageCards}
       </ScrollView>
     </View>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, View, Text, StyleSheet} from 'react-native';
+import {Image, ScrollView, View, Text, StyleSheet} from 'react-native';
 import {Header} from '../Header';
 
 export const Preview = props => {
@@ -14,7 +14,7 @@ export const Preview = props => {
   const {route} = props;
   const {image} = route.params;
   return (
-    <View>
+    <ScrollView>
       <Header title={'Unsplash'} />
       <View style={userImgHolder}>
         <Image style={userImg} source={{uri: image.user.profile_image.large}} />
@@ -23,7 +23,7 @@ export const Preview = props => {
       <Image style={thumbImage} source={{uri: image.urls.full}} />
       <Text style={location}>{image.user.location}</Text>
       <Text style={description}>{image.description}</Text>
-    </View>
+    </ScrollView>
   );
 };
 
